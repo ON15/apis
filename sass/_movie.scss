@@ -1,0 +1,30 @@
+.movie {
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__plot {
+    font-style: italic;
+  }
+
+  &__poster {
+    display: block;
+    width: 100%;
+    max-width: 25rem;
+  }
+
+  &__details,
+  &__ratings {
+    display: grid;
+    grid-template-columns: max-content auto;
+
+    > div {
+      display: contents;
+    }
+  }
+
+  dt {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,67 @@
+@use "variables" as *;
+@use "normalize";
+@use "movie";
+@use "movies";
+@use "loading-spinner";
+
+body {
+  background-color: $dark-purple;
+  color: $text;
+  font-family: sans-serif;
+}
+h1 {
+  text-align: center;
+}
+
+header,
+main,
+footer {
+  max-width: 80rem;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $white;
+  font-family: sans-serif;
+}
+
+button {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: 1.2rem;
+  background: orange;
+  color: $black;
+  border: none;
+  box-shadow: none;
+  margin: 0.5rem;
+  font-weight: bold;
+  &[disabled] {
+    background: $text;
+  }
+}
+
+a {
+  color: $light-red;
+  &:hover,
+  &:focus {
+    color: $medium-red;
+  }
+}
+
+.error {
+  color: $medium-red;
+  font-size: 2rem;
+}
+
+.main-navigation {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  > a {
+    text-decoration: none;
+  }
+}
